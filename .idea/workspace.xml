@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2f463a54-c622-4386-b5d1-e0988d2dbfbb" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000000000002203" />
+      <entry key="S2" value="1.0024975414908777" />
+      <entry key="S5" value="1.2654455844789683" />
+      <entry key="S10" value="2.2660375028246356" />
+      <entry key="S30" value="6.490250403463765" />
+      <entry key="S60" value="16.476240607325874" />
+      <entry key="M2" value="33.892903479788366" />
+      <entry key="M5" value="56.286049536916835" />
+      <entry key="M10" value="67.36233735340491" />
+      <entry key="M15" value="71.59546715418156" />
+      <entry key="M30" value="76.13363258334904" />
+      <entry key="H1" value="78.52427362679389" />
+      <entry key="H2" value="79.75130512406969" />
+      <entry key="H4" value="80.37291972854321" />
+      <entry key="D1" value="80.89510492757705" />
+      <entry key="W1" value="80.98500561409624" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="2.6612002870632754E-138" />
+      <entry key="S2" value="4.038958495871755E-35" />
+      <entry key="S5" value="1.7478644776414832E-14" />
+      <entry key="S10" value="1.3220682575576379E-7" />
+      <entry key="S30" value="0.0050943012824232504" />
+      <entry key="S60" value="0.07137437412981816" />
+      <entry key="M2" value="0.26715982881005523" />
+      <entry key="M5" value="0.5898050172377637" />
+      <entry key="M10" value="0.7679876413313982" />
+      <entry key="M15" value="0.8386282492131659" />
+      <entry key="M30" value="0.9157664818135498" />
+      <entry key="H1" value="0.9569568860787561" />
+      <entry key="H2" value="0.9782417319245573" />
+      <entry key="H4" value="0.9890610354900026" />
+      <entry key="D1" value="0.998168473476159" />
+      <entry key="W1" value="0.9997381477436734" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.7219645977612481" />
+      <entry key="MS500" value="0.936921446872641" />
+      <entry key="S2" value="0.9863273704254352" />
+      <entry key="S5" value="1.2583958177950212" />
+      <entry key="S10" value="2.261466442274884" />
+      <entry key="S30" value="6.492463478698876" />
+      <entry key="S60" value="16.54421589122688" />
+      <entry key="M2" value="34.156243611511876" />
+      <entry key="M5" value="56.87308294965813" />
+      <entry key="M10" value="68.1286112446716" />
+      <entry key="M15" value="72.43286748253892" />
+      <entry key="M30" value="77.04873880002104" />
+      <entry key="H1" value="79.48088808201115" />
+      <entry key="H2" value="80.72937247126039" />
+      <entry key="H4" value="81.36189276720889" />
+      <entry key="D1" value="81.89325862214221" />
+      <entry key="W1" value="81.98474164779144" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3J37DgcGU6g5JHd63eqMTgqf8n6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/alexandreklotz/PycharmProjects/API_YCrousty",
+    "nodejs_package_manager_path": "npm",
+    "python.packages.toolwindow.project.migrated.to.right.top.v2": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="api-ycrousty" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <module name="api-ycrousty" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docs" factoryName="Docutils task">
+      <module name="api-ycrousty" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="docutils_input_file" value="" />
+      <option name="docutils_output_file" value="" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="" />
+      <option name="docutils_open_in_browser" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docs" factoryName="Sphinx task">
+      <module name="api-ycrousty" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="docutils_input_file" value="" />
+      <option name="docutils_output_file" value="" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="" />
+      <option name="docutils_open_in_browser" value="false" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-eff1e8def5f5-5bd6d13a2a75-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-262.10315.174" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2f463a54-c622-4386-b5d1-e0988d2dbfbb" name="Changes" comment="" />
+      <created>1772187863437</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1772187863437</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
