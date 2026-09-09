@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/api-ycrousty.iml" filepath="$PROJECT_DIR$/.idea/api-ycrousty.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/ytasty-exemple.iml" filepath="$PROJECT_DIR$/.idea/ytasty-exemple.iml" />
+>>>>>>> 1cf271aec86cd9484f804b391e586cdecba451c5
     </modules>
   </component>
 </project>
