@@ -10,7 +10,6 @@ from app.modules.auth.service import seed_admin
 from app.modules.health.router import router as health_router
 from app.modules.users.router import router as users_router
 
-
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Cree les tables et le compte admin au demarrage."""
