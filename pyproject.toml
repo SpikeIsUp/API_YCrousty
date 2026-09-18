@@ -1,25 +1,22 @@
 [project]
-name = "api-ycrousty"
+name = "ytasty-crousty-api"
 version = "0.1.0"
-description = "Add your description here"
-readme = "README.md"
-authors = [
-    { name = "KLOTZ alexandre", email = "klotzalexandre431@gmail.com" }
-]
-requires-python = ">=3.13"
+requires-python = ">=3.12"
 dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "sqlalchemy>=2.0",
+    "psycopg[binary]>=3.1",
+    "pydantic-settings>=2.3",
+    "pyjwt>=2.14.0",
     "bcrypt>=5.0.0",
-    "fastapi>=0.141.1",
-    "psycopg[binary]>=3.3.5",
-    "pydantic-settings>=2.15.0",
-    "pyjwt>=2.13.0",
-    "sqlalchemy>=2.0.52",
-    "uvicorn>=0.52.4",
 ]
 
-[project.scripts]
-api-ycrousty = "api_ycrousty:main"
+[dependency-groups]
+dev = ["ruff>=0.6", "pytest>=8.0", "httpx>=0.27"]
 
-[build-system]
-requires = ["uv_build>=0.12.10,<0.13.0"]
-build-backend = "uv_build"
+[tool.uv]
+package = false
+
+[tool.ruff]
+line-length = 88
