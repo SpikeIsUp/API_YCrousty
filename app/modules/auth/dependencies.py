@@ -9,6 +9,10 @@ from app.modules.auth.security import decode_access_token
 bearer_scheme = HTTPBearer()
 
 
+def require_admin(
+    credentials: HTTPAuthorizationCredentials = Depends(bearer_scheme),
+) -> dict:
+    """Verifie qu'un JWT valide appartient a un administrateur."""
 def get_current_user(
     credentials: HTTPAuthorizationCredentials = Depends(bearer_scheme),
 ) -> dict:
