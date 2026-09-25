@@ -63,3 +63,9 @@ reçoit          décide           interroge la base
 `POST /users` est réservé à un administrateur authentifié. Il accepte les
 rôles `admin`, `staff` et `direction`, et sa réponse publique n'inclut jamais
 le mot de passe ni son hash.
+
+Le module `orders` expose la création publique et le suivi public des
+commandes. La consultation des commandes, la modification de leur statut et
+leur annulation nécessitent un JWT. Les utilisateurs `staff` sont limités à
+leur restaurant, tandis que `admin` et `direction` ont accès à tous les
+restaurants.

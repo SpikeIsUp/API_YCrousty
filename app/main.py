@@ -11,6 +11,10 @@ from app.modules.health.router import router as health_router
 from app.modules.users.router import router as users_router
 from app.modules.restaurants.router import router as restaurants_router
 from app.modules.restaurants.service import seed_restaurants
+from app.modules.orders.router import restaurant_orders_router
+from app.modules.orders.router import router as orders_router
+from app.modules.users.router import router as users_router
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -31,3 +35,5 @@ app.include_router(health_router)
 app.include_router(auth_router)
 app.include_router(users_router)
 app.include_router(restaurants_router)
+app.include_router(orders_router)
+app.include_router(restaurant_orders_router)
