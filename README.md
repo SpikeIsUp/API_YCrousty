@@ -59,3 +59,7 @@ reçoit          décide           interroge la base
 ## Modules à ajouter
 
 `auth/`, `users/`, `restaurants/`, `products/`, `orders/`.
+
+`POST /users` est réservé à un administrateur authentifié. Il accepte les
+rôles `admin`, `staff` et `direction`, et sa réponse publique n'inclut jamais
+le mot de passe ni son hash.
