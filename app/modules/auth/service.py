@@ -13,7 +13,11 @@ def authenticate_user(db: Session, credentials: LoginRequest) -> TokenResponse |
     user = db.query(User).filter(User.username == credentials.username).first()
     if user is None or not verify_password(credentials.password, user.hashed_password):
         return None
-    token = create_access_token(subject=user.username, role=user.role)
+    token = create_access_token(
+        subject=user.username,
+        role=user.role,
+        restaurant_id=user.restaurant_id,
+    )
     return TokenResponse(access_token=token)
 
 
