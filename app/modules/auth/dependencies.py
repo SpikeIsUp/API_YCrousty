@@ -9,10 +9,6 @@ from app.modules.auth.security import decode_access_token
 bearer_scheme = HTTPBearer()
 
 
-def require_admin(
-    credentials: HTTPAuthorizationCredentials = Depends(bearer_scheme),
-) -> dict:
-    """Verifie qu'un JWT valide appartient a un administrateur."""
 def get_current_user(
     credentials: HTTPAuthorizationCredentials = Depends(bearer_scheme),
 ) -> dict:
@@ -38,21 +34,6 @@ def require_admin(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="droits administrateur requis",
         )
-        return payload
-
-
-def get_current_user(
-    credentials: HTTPAuthorizationCredentials = Depends(bearer_scheme),
-) -> dict:
-    """Decode le JWT et retourne son contenu (sub, role, restaurant_id)."""
-    try:
-        payload = decode_access_token(credentials.credentials)
-    except PyJWTError as exc:
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="token invalide ou expire",
-            headers={"WWW-Authenticate": "Bearer"},
-        ) from exc
     return payload
 
 

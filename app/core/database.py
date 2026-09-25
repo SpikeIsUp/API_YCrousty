@@ -2,7 +2,7 @@
 
 from collections.abc import Generator
 
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, inspect, text
 from sqlalchemy.orm import DeclarativeBase, Session, sessionmaker
 
 from app.core.config import settings
@@ -22,3 +22,28 @@ def get_db() -> Generator[Session, None, None]:
         yield db
     finally:
         db.close()
+
+
+def ensure_restaurant_schema() -> None:
+    """Ajoute les colonnes restaurants manquantes dans une base existante."""
+    inspector = inspect(engine)
+    if not inspector.has_table("restaurants"):
+        return
+
+    existing = {
+        column["name"] for column in inspector.get_columns("restaurants")
+    }
+    missing = {
+        "city": "VARCHAR(100)",
+        "address": "VARCHAR(255)",
+        "is_open": "BOOLEAN DEFAULT TRUE",
+        "opening_hours": "JSON",
+        "contact": "VARCHAR(20)",
+    }
+
+    with engine.begin() as connection:
+        for name, definition in missing.items():
+            if name not in existing:
+                connection.execute(
+                    text(f"ALTER TABLE restaurants ADD COLUMN {name} {definition}")
+                )

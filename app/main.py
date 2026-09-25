@@ -4,18 +4,25 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 
-from app.core.database import Base, SessionLocal, engine
+from app.core.database import (
+    Base,
+    SessionLocal,
+    engine,
+    ensure_restaurant_schema,
+)
 from app.modules.auth.router import router as auth_router
 from app.modules.auth.service import seed_admin
 from app.modules.health.router import router as health_router
-from app.modules.restaurants.models import Restaurant  
 from app.modules.products.router import router as products_router
+from app.modules.restaurants.router import router as restaurants_router
+from app.modules.restaurants.service import seed_restaurants
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Cree les tables et le compte admin au demarrage."""
     Base.metadata.create_all(bind=engine)
+    ensure_restaurant_schema()
     db = SessionLocal()
     try:
         seed_admin(db)
@@ -29,4 +36,5 @@ app = FastAPI(title="Ytasty Crousty API", version="0.1.0", lifespan=lifespan)
 
 app.include_router(health_router)
 app.include_router(auth_router)
+app.include_router(restaurants_router)
 app.include_router(products_router)
