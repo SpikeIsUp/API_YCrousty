@@ -1,6 +1,6 @@
 """Utilitaires de securite : hash de mot de passe et JWT."""
 
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 
 import bcrypt
 import jwt

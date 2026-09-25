@@ -19,6 +19,7 @@ async def lifespan(app: FastAPI):
     db = SessionLocal()
     try:
         seed_admin(db)
+        seed_restaurants(db)
     finally:
         db.close()
     yield
