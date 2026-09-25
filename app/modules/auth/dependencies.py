@@ -9,10 +9,10 @@ from app.modules.auth.security import decode_access_token
 bearer_scheme = HTTPBearer()
 
 
-def require_admin(
+def get_current_user(
     credentials: HTTPAuthorizationCredentials = Depends(bearer_scheme),
 ) -> dict:
-    """Verifie qu'un JWT valide appartient a un administrateur."""
+    """Verifie qu'un JWT valide est fourni et retourne son contenu."""
     try:
         payload = decode_access_token(credentials.credentials)
     except PyJWTError as exc:
@@ -21,6 +21,13 @@ def require_admin(
             detail="token invalide ou expire",
             headers={"WWW-Authenticate": "Bearer"},
         ) from exc
+    return payload
+
+
+def require_admin(
+    payload: dict = Depends(get_current_user),
+) -> dict:
+    """Verifie qu'un JWT valide appartient a un administrateur."""
 
     if payload.get("role") != "admin":
         raise HTTPException(

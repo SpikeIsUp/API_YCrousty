@@ -1,6 +1,6 @@
 """Utilitaires de securite : hash de mot de passe et JWT."""
 
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 
 import bcrypt
 import jwt
@@ -18,12 +18,16 @@ def verify_password(password: str, hashed_password: str) -> bool:
     return bcrypt.checkpw(password.encode("utf-8"), hashed_password.encode("utf-8"))
 
 
-def create_access_token(subject: str, role: str) -> str:
+def create_access_token(
+    subject: str,
+    role: str,
+    restaurant_id: int | None = None,
+) -> str:
     """Cree un JWT signe contenant l'identifiant et le role."""
-    expire = datetime.now(timezone.utc) + timedelta(
+    expire = datetime.now(UTC) + timedelta(
         minutes=settings.access_token_expire_minutes
     )
-    payload = {"sub": subject, "role": role, "exp": expire}
+    payload = {"sub": subject, "role": role, "restaurant_id": restaurant_id, "exp": expire}
     return jwt.encode(payload, settings.secret_key, algorithm=settings.algorithm)
 
 
