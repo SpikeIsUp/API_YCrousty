@@ -24,6 +24,26 @@ def get_db() -> Generator[Session, None, None]:
         db.close()
 
 
+def ensure_user_schema() -> None:
+    """Ajoute les colonnes utilisateurs manquantes dans une base existante."""
+    inspector = inspect(engine)
+    if not inspector.has_table("users"):
+        return
+
+    existing = {column["name"] for column in inspector.get_columns("users")}
+    missing = {
+        "first_name": "VARCHAR(100)",
+        "last_name": "VARCHAR(100)",
+    }
+
+    with engine.begin() as connection:
+        for name, definition in missing.items():
+            if name not in existing:
+                connection.execute(
+                    text(f"ALTER TABLE users ADD COLUMN {name} {definition}")
+                )
+
+
 def ensure_restaurant_schema() -> None:
     """Ajoute les colonnes restaurants manquantes dans une base existante."""
     inspector = inspect(engine)

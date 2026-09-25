@@ -27,7 +27,7 @@ def create_order(db: Session, data: OrderCreate) -> Order:
     if restaurant is None:
         raise OrderError("restaurant introuvable", 404)
     if not restaurant.is_open:
-        raise OrderError("le restaurant est ferme", 409)
+        raise OrderError("le restaurant est ferme", 400)
 
     products: list[tuple[Product, int]] = []
     total = Decimal("0.00")
@@ -36,9 +36,9 @@ def create_order(db: Session, data: OrderCreate) -> Order:
         if product is None:
             raise OrderError("produit introuvable", 404)
         if product.restaurant_id != data.restaurant_id:
-            raise OrderError("le produit appartient a un autre restaurant", 409)
-        if not product.available:
-            raise OrderError("le produit est indisponible", 409)
+            raise OrderError("le produit appartient a un autre restaurant", 400)
+        if not product.is_available:
+            raise OrderError("le produit est indisponible", 400)
         products.append((product, requested_item.quantity))
         total += product.price * requested_item.quantity
 

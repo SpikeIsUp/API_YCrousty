@@ -6,13 +6,19 @@ from jwt import PyJWTError
 
 from app.modules.auth.security import decode_access_token
 
-bearer_scheme = HTTPBearer()
+bearer_scheme = HTTPBearer(auto_error=False)
 
 
 def get_current_user(
-    credentials: HTTPAuthorizationCredentials = Depends(bearer_scheme),
+    credentials: HTTPAuthorizationCredentials | None = Depends(bearer_scheme),
 ) -> dict:
     """Verifie qu'un JWT valide est fourni et retourne son contenu."""
+    if credentials is None:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="authentification requise",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
     try:
         payload = decode_access_token(credentials.credentials)
     except PyJWTError as exc:

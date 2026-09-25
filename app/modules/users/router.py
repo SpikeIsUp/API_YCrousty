@@ -25,7 +25,7 @@ def create_user(
     user = service.create_user(db, user_data)
     if user is None:
         raise HTTPException(
-            status_code=status.HTTP_409_CONFLICT,
+            status_code=status.HTTP_400_BAD_REQUEST,
             detail="ce nom d'utilisateur existe deja",
         )
     return user

@@ -5,7 +5,12 @@ from sqlalchemy.orm import Session
 from app.core.config import settings
 from app.modules.auth.models import User
 from app.modules.auth.schemas import LoginRequest, TokenResponse
-from app.modules.auth.security import create_access_token, hash_password, verify_password
+from app.modules.auth.security import (
+    create_access_token,
+    hash_password,
+    verify_password,
+)
+
 
 def authenticate_user(db: Session, credentials: LoginRequest) -> TokenResponse | None:
     """Verifie les identifiants et retourne un token si valides."""
