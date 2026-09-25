@@ -12,3 +12,5 @@ router = APIRouter(tags=["health"])
 def health() :
     """Verifie que l'API repond."""
     return service.get_status()
+
+    
