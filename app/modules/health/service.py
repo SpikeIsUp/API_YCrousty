@@ -1,5 +1,3 @@
-"""Regles metier du module health."""
-
 from app.modules.health.schemas import HealthResponse
 
 

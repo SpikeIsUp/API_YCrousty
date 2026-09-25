@@ -18,14 +18,18 @@ def verify_password(password: str, hashed_password: str) -> bool:
     return bcrypt.checkpw(password.encode("utf-8"), hashed_password.encode("utf-8"))
 
 
-def create_access_token(subject: str, role: str) -> str:
-    """Cree un JWT signe contenant l'identifiant et le role."""
+def create_access_token(subject: str, role: str, restaurant_id: int | None = None) -> str:
+    """Cree un JWT signe contenant l'identifiant, le role et le restaurant."""
     expire = datetime.now(timezone.utc) + timedelta(
         minutes=settings.access_token_expire_minutes
     )
-    payload = {"sub": subject, "role": role, "exp": expire}
+    payload = {
+        "sub": subject,
+        "role": role,
+        "restaurant_id": restaurant_id,
+        "exp": expire,
+    }
     return jwt.encode(payload, settings.secret_key, algorithm=settings.algorithm)
-
 
 def decode_access_token(token: str) -> dict:
     """Decode et verifie un JWT. Leve une exception si invalide/expire."""
