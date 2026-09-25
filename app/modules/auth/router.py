@@ -1,5 +1,5 @@
 """Routes HTTP du module auth."""
-
+from app.modules.auth.dependencies import check_restaurant_access, require_staff_or_admin
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 
